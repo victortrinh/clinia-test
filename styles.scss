@@ -1,4 +1,65 @@
-$font-size: 50px;
-.example {
+$font-size: 14px;
+$border-radius: 5px;
+
+root {
   font-size: $font-size;
+}
+
+select,
+input,
+button {
+  padding: 0 10px;
+  font-size: 1rem;
+  border: 1px solid #57666e;
+  border-radius: $border-radius;
+  height: 32px;
+  line-height: 32px;
+
+  ::placeholder {
+    color: #57666e;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: #0080a5;
+    box-shadow: 0 0 1px 0 #0080a5;
+    background: #ffffff;
+    outline: none;
+  }
+}
+
+input,
+label {
+  display: block;
+}
+
+.heading {
+  font-size: 2rem;
+  padding-bottom: 12px;
+}
+
+#appointment-form {
+  margin-top: 20px;
+
+  .error {
+    padding: 12px;
+    background-color: red;
+    color: white;
+  }
+
+  .service-selector,
+  .field {
+    margin: 12px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    padding: 12px;
+    margin-top: 20px;
+  }
 }

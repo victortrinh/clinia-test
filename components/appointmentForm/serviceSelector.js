@@ -1,16 +1,19 @@
 import { useEffect } from "react";
+import { Select } from "antd";
 
 export const ServiceSelector = ({ value, onChange, services }) => {
   useEffect(() => {}, [value]);
 
   return (
-    <select className="service-selector" value={value} onChange={onChange}>
-      <option value="">Select a service</option>
-      {services.map((service) => (
-        <option key={service} value={service}>
-          {service}
-        </option>
-      ))}
-    </select>
+    <div className="service-selector">
+      <Select value={value} onChange={onChange} defaultValue="">
+        <Select.Option value="">Select a service</Select.Option>
+        {services.map((service) => (
+          <Select.Option key={service} value={service}>
+            {service}
+          </Select.Option>
+        ))}
+      </Select>
+    </div>
   );
 };
